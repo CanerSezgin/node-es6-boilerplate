@@ -19,7 +19,7 @@ class FeatureService {
     if (!feature.name) {
       throw new ErrorHandler(422, "name field missing", true);
     }
-    
+
     try {
       const newFeature = new Feature(feature);
       await newFeature.save();

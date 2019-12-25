@@ -7,7 +7,9 @@
     "clean": "rm -rf ./dist",
     "build": "npm run clean && babel src -d dist",
     "dev": "NODE_ENV=development nodemon --exec babel-node src/index.js",
-    "start": "NODE_ENV=production npm run build && node dist/index.js"
+    "start": "NODE_ENV=production npm run build && node dist/index.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "repository": {
     "type": "git",
@@ -39,6 +41,8 @@
     "@babel/core": "^7.4.0",
     "@babel/node": "^7.7.7",
     "@babel/preset-env": "^7.4.2",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
     "nodemon": "^2.0.2"
   }
 }
