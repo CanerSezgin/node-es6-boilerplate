@@ -11,10 +11,6 @@ const app = express();
 expressLib(app)
 routes(app)
 
-app.get("/", async (req, res, next) => {
-  return res.send(200).json({status: 'ok'})
-});
-
 const server = app.listen(process.env.PORT || config.port, () => {
     startDB().then(() => console.log('DB Connected')).catch(err => console.log(err))
     const host = os.hostname();
