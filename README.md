@@ -52,23 +52,14 @@ And in your services, you will just throw error.
 
 ### Scripts
 
-##### Remove dist folder
-`npm run clean`
-
-##### Babel Production ready compilation.
-`npm run build`
-
-##### Sets NODE_ENV=development, with nodemon all files changes are watched and automatically rebuild during development.
-`npm run dev`
-
-##### NODE_ENV=production, it is used under production mode.
-`npm run start`
-
-##### Run eslint with all files
-`npm run lint`
-
-##### Eslint tries to fix some errors & warnings
-`npm run lint:fix`
+| Commands         | Descriptions  |
+| ---------------- |:-------------:|
+| npm run clean    | Remove dist folder |
+| npm run build    | Babel Production ready compilation |
+| npm run dev      | With nodemon all files changes are watched and automatically rebuild during development |
+| npm run start    | NODE_ENV=production, it is used under production mode |
+| npm run lint     | Run eslint with all files |
+| npm run lint:fix | Eslint tries to fix some errors & warnings |
 
 ### Install & Run
 
