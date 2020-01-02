@@ -15,9 +15,10 @@ export class ErrorHandler extends Error {
   }
 }
 
-export const handleError = async (err, req, res) => {
+// eslint-disable-next-line no-unused-vars
+export const handleError = async (err, req, res, next) => {
   const { statusCode, message, isOperational } = err;
-  res.status(statusCode).json({
+  return res.status(statusCode).json({
     status: "error",
     statusCode,
     message,

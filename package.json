@@ -2,12 +2,12 @@
   "name": "node-es6-boilerplate",
   "version": "1.0.0",
   "description": "NodeJS ES6 with babel boilerplate.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "clean": "rm -rf ./dist",
     "build": "npm run clean && babel src -d dist",
-    "dev": "NODE_ENV=development nodemon --exec babel-node src/index.js",
-    "start": "NODE_ENV=production npm run build && node dist/index.js",
+    "dev": "NODE_ENV=development nodemon --exec babel-node src/app.js",
+    "start": "NODE_ENV=production npm run build && node dist/app.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
