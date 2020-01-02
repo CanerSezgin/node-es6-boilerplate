@@ -26,10 +26,8 @@ Boilerplate for ES6 Node.JS web APIs, structured by self-contained components.
 #### Project Structure
 
 - Don't use MVC design pattern. Use Components !
-  The main idea behind this, we should keep all related files to one component (such as: controller, model, service) under same folder. This approach perfectly fits microservice patterns.
+  The main idea behind this, we should keep all related files to one component (such as: controller, model, service) under same folder. This approach perfectly fits microservice patterns. <br>
   [Read More](https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/projectstructre/breakintcomponents.md)
-
-![alt text](https://github.com/i0natan/nodebestpractices/blob/master/assets/images/structurebycomponents.PNG "Structuring solution by components")
 
 - Don't put everything inside **app.js**
   Use modular approach for default initializations such as express, routes, db
@@ -37,7 +35,7 @@ Boilerplate for ES6 Node.JS web APIs, structured by self-contained components.
 
 #### Error Handling
 
-The project contains custom ErrorHandler which's inherited from built-in Error class. You can easily update this custom ErrorHandler according your needs.
+* The project contains custom ErrorHandler which's inherited from built-in Error class. You can easily update this custom ErrorHandler according your needs.
 For your controller you don't need to add anything, just use the same structure.
 
 ```
@@ -49,27 +47,27 @@ catch (error) {
 And in your services, you will just throw error.
 `throw new ErrorHandler(400, "couldn't fetch data", true);`
 
-Distinguishing operational vs programmer errors will minimize your app downtime and helps avoid crazy bugs.
+* Distinguishing operational vs programmer errors will minimize your app downtime and helps avoid crazy bugs. <br>
 [Read More](https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/errorhandling/operationalvsprogrammererror.md)
 
 ### Scripts
 
-Remove dist folder
+##### Remove dist folder
 `npm run clean`
 
-Babel Production ready compilation.
+##### Babel Production ready compilation.
 `npm run build`
 
-Sets NODE_ENV=development, with nodemon all files changes are watched and automatically rebuild during development.
+##### Sets NODE_ENV=development, with nodemon all files changes are watched and automatically rebuild during development.
 `npm run dev`
 
-NODE_ENV=production, it is used under production mode.
+##### NODE_ENV=production, it is used under production mode.
 `npm run start`
 
-Run eslint with all files
+##### Run eslint with all files
 `npm run lint`
 
-Eslint tries to fix some errors & warnings
+##### Eslint tries to fix some errors & warnings
 `npm run lint:fix`
 
 ### Install & Run
@@ -80,7 +78,7 @@ Eslint tries to fix some errors & warnings
 
 ##### run your db & update config/default.json
 
-If you want to use mongoDB with docker:
+If you want to use mongoDB with docker: <br>
 `docker run --rm --name mymongo -d -p 27017:27017 -v ~/docker/volumes/mongo:/data/db mongo`
 
 ##### Run Development Mode
