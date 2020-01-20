@@ -1,4 +1,4 @@
-# Node ES6 REST API Boilerplate
+# Node ES6 REST API Boilerplate 2020
 
 Boilerplate for ES6 Node.JS web APIs, structured by self-contained components.
 
