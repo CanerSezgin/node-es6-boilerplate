@@ -8,6 +8,7 @@
     "build": "npm run clean && babel src -d dist",
     "dev": "NODE_ENV=development nodemon --exec babel-node src/app.js",
     "start": "NODE_ENV=production npm run build && node dist/app.js",
+    "start2": "babel src/app.js --out-dir dist/app.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
@@ -37,11 +38,11 @@
     "morgan": "^1.9.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
+    "@babel/cli": "^7.12.8",
     "@babel/core": "^7.4.0",
     "@babel/node": "^7.7.7",
-    "@babel/preset-env": "^7.4.2",
     "babel-eslint": "^10.0.3",
+    "babel-preset-env": "^1.7.0",
     "eslint": "^6.8.0",
     "nodemon": "^2.0.2"
   }
